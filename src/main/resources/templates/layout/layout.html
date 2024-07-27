@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:fragment="dynamic(view)">
+<body>
+<header style="width: 150px">Logo</header>
+<nav th:fragment="navbar">
+    <hr>
+
+    <nav th:insert="~{/layout/menu.html :: navbar}"></nav>
+    <hr>
+    <main th:replace="${view}"></main>
+</nav>
+</body>
+</html>

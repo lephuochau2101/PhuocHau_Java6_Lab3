@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Trang chủ</title>
+</head>
+<body>
+<div th:with="y='Hậu Đẹp Trai'">
+  <div th:replace="~{fragments :: frag1}"></div>
+</div>
+<hr>
+<div th:replace="~{fragments :: frag2(${#ids.x.text()}, ${y})}"></div>
+<i id="x" th:remove="all">FPT</i>
+
+</body>
+</html>
